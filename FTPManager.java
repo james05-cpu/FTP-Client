@@ -285,7 +285,7 @@
         
                 FTPClient ftpClient = new FTPClient();
                 try {
-                    ftpClient.connect(server, 9990);
+                    ftpClient.connect(server, PORT);
                     ftpClient.login(user, pass);
                     boolean success = ftpClient.deleteFile(name);
                     if (success) {
@@ -313,7 +313,7 @@
         
                 FTPClient ftpClient = new FTPClient();
                 try {
-                    ftpClient.connect(server, 9990);
+                    ftpClient.connect(server, PORT);
                     ftpClient.login(user, pass);
                     boolean success = ftpClient.makeDirectory(name);
                     if (success) {
@@ -341,7 +341,7 @@
         
                 FTPClient ftpClient = new FTPClient();
                 try {
-                    ftpClient.connect(server, 9999);
+                    ftpClient.connect(server, PORT);
                     ftpClient.login(user, pass);
                     boolean success = ftpClient.changeWorkingDirectory(To);
                     if (success) {
@@ -368,7 +368,7 @@
         
                 FTPClient ftpClient = new FTPClient();
                 try {
-                    ftpClient.connect(server, 9990);
+                    ftpClient.connect(server, PORT);
                     ftpClient.login(user, pass);
         
         
@@ -398,7 +398,7 @@
                 StringBuilder builder = new StringBuilder();
                 StringBuilder builder1 = new StringBuilder();
                 try {
-                    ftpClient.connect(server, 9990);
+                    ftpClient.connect(server, PORT);
                     ftpClient.login(user, pass);
                     FTPFile[] files = ftpClient.listFiles();
                     for (FTPFile file : files) {
